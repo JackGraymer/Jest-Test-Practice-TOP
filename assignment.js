@@ -43,12 +43,22 @@ function caesarCipher(sentence, key = 1){
     }
     return cypher
 }
-caesarCipher('AZaz ')
 
+function analyzeArray(arr){
+    return {
+        average: arr.reduce((a,b) => a + b, 0) / arr.length,
+        min: Math.min(...arr),
+        max: Math.max(...arr),
+        length: arr.length
+    }
+}
+
+console.log(analyzeArray([1,2]))
 
 export {
     capitalize,
     reverse,
     calculator,
-    caesarCipher
+    caesarCipher,
+    analyzeArray
 }
